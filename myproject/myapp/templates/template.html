@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <p>{{data}}</p>
+    <hr>
+    {% with name="user" %}
+    <h2>{{name}}님 안녕하세요.</h2>
+    {% endwith %}
+    {% if count == 0 %}
+        <p>첫 방문입니다.</p>
+    {% elif count == 1 %}
+        <p>다시 오셨군요.</p>
+    {% endif %}
+    <hr>
+    <h2>메뉴</h2>
+    <ul>
+    {% for item in tlist reversed %}
+        <li>{{forloop.revcounter0}} : {{item}}</li>
+    {% empty %}
+        <li>메뉴 없음</li>
+    {% endfor %}
+    </ul>
+    <hr>
+    <p><a href="somepage">[이동]</a></p>
+</body>
+</html>
