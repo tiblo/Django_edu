@@ -1,4 +1,4 @@
-# 장고 시작~
+# Django
 
 Django는...
 > 프랑스의 유명한 작곡가 Django Reinhardt의 이름을 따서 명명된, 모델-뷰-컨트롤러(MVC)의 아키텍처 패턴을 따르는 Python 기반 웹 프레임워크.<br>
