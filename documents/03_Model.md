@@ -27,7 +27,7 @@ class Data_tbl(models.Model):
 
     # Methods
     def get_absolute_url(self):
-        return reverse('myapp:myapp_datail', kwargs={'pk':self.id})
+        return reverse('myapp:myapp_datail', kwargs={'id':self.id})
 
     def __str__(self):
         return self.col_name
