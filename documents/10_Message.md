@@ -18,7 +18,7 @@ Message Framework 다음과 같은 특징을 갖는다.
 ## 간단한 예제(by ChatGPT)
 views.py
 ```python
-from django.shortcuts import redirect
+from django.contrib import messages
 
 def my_view(request):
     # 성공 메시지 추가
