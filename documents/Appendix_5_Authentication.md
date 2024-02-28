@@ -116,7 +116,7 @@ UserCreationForm은 각 필드에 대한 유효성 검사 코드가 내장되어
 
 회원 가입 페이지로 이동하기 위해 다음과 같이 링크를 작성한다.
 ```html
-<a href="{% url "join" %}">[회원가입]</a>
+<a href="join">[회원가입]</a>
 ```
 
 ### view 작성
@@ -188,7 +188,7 @@ templates 폴더에 'login.html'을 생성하고 다음과 같이 작성한다.
 
 로그인 페이지로 이동을 위해 다음과 같이 링크를 작성한다.
 ```html
-<a href="{% url "login" %}">[로그인]</a>
+<a href="login">[로그인]</a>
 ```
 
 ### url 작성
@@ -264,7 +264,7 @@ urls.py는 다음과 같이 수정한다.
 ```phthon
 urlpatterns = [
     ...
-    path('logout/', views.logout_view, name='logout'),
+    path('logout', views.logout_view, name='logout'),
 ]
 ```
 
@@ -274,7 +274,7 @@ settings.py에 작성한 logout 시 리다이렉트 설정은 지운다.
 
 로그인이나 회원가입과 같이 ```<a>``` 태그를 사용하고자 할 경우는 다음과 같이 작성한다.
 ```html
-<a href="{% url "logout" %}">[로그아웃]</a>
+<a href="logout">[로그아웃]</a>
 ```
 
 ```<form>```을 사용하여 작성한 경우는 views의 메소드에서 'POST'로 작성하면 되고, ```<a>```를 사용한 경우는 'GET'으로 작성한다.
