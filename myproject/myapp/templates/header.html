@@ -1,0 +1,15 @@
+<h1><a href="/">Django 사이트{{title}}</a></h1>
+{% if user.is_authenticated %}
+    {% comment %} 
+    <form action="{% url "logout" %}" method="post">
+        {% csrf_token %}
+        <label for="logout">[로그아웃]</label>
+        <input type="submit" id="logout" style="display: none;">
+    </form> 
+    {% endcomment %}
+    <span>{{user.username}}님</span> <a href="logout">[로그아웃]</a>
+{% else %}
+    <a href="login">[로그인]</a>
+    <a href="join">[회원가입]</a>
+{% endif %}
+<hr>
