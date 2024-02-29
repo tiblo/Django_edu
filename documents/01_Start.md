@@ -135,8 +135,10 @@ deactivate
 }
 ```
 
-위와 같이 작성하고 실행하면 오류가 발생한다. 'preLaunchTask' 관려 설정이 없기 때문인데, 오류창에서 'Configure Task' 버튼을 클릭하고 'Create task.json file from template'을 선택한다.
-다음 화면에서 'Others Example to run an arbitrary external command'를 선택하면 tasks.json 파일이 생성된다.
+위와 같이 작성하고 실행하면 오류가 발생한다. 'preLaunchTask' 관려 설정이 없기 때문인데, 다음과 같은 순서로 tasks.json 파일을 생성한다.
+* 오류창에서 'Configure Task'버튼 클릭
+* 'Create task.json file from template' 선택
+* 'Others Example to run an arbitrary external command' 선택
 
 생성된 tasks.json 파일에 다음과 같이 작성한다.
 ```json
