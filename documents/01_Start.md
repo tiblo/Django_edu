@@ -128,11 +128,30 @@ deactivate
                 "runserver"
             ],
             "django": true,
-            "justMyCode": true
+            "justMyCode": true,
+            "preLaunchTask": "activateVirturalEnv",
         }
     ]
 }
 ```
 
+위와 같이 작성하고 실행하면 오류가 발생한다. 'preLaunchTask' 관려 설정이 없기 때문인데, 오류창에서 'Configure Task' 버튼을 클릭하고 'Create task.json file from template'을 선택한다.
+다음 화면에서 'Others Example to run an arbitrary external command'를 선택하면 tasks.json 파일이 생성된다.
 
-
+생성된 tasks.json 파일에 다음과 같이 작성한다.
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "activateVirturalEnv",
+            "type": "shell",
+            "command": "${workspaceFolder}/myenv/Scripts/activate",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
+```
