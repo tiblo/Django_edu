@@ -43,25 +43,29 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 ```
 
-urls.py에 settings.py에서 설정한 경로 정보를 가져오기 위해 다음을 추가한다.
+movieinfo/movieinfo 폴더의 urls.py에 settings.py에서 설정한 경로 정보를 가져오기 위해 다음을 추가한다.
 ```python
 ...
+from django.urls import re_path as url
 from django.conf import settings
-from django.conf.urls.static import static
+from django.views.static import serve
 
 urlpatterns = [
     ...
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'^media/(?P<path>.*)$', serve, {'document_root':settings.MEDIA_ROOT}),
+    ...
+]
 ```
 
 > 파일의 저장 경로는 'movieinfo/media/images/'가 된다.(프로젝트폴더/media/images)
 ```
-project_name/
+movieinfo/
 ├── manage.py
 ├── media
 │   └── images
-├── project_name/
-└── app_name/    
+├── movieinfo/
+└── movie/
+└── static/ 
 ```
 
 form.py의 ModelForm에 각 입력 필드의 속성을 설정
@@ -94,8 +98,8 @@ request에서 multipart로 전송되는 파일 정보를 꺼내 movie 객체의 
 
 HTML의 form 태그에는 반드시 enctype을 'multipart/form-data'로 설정해야 한다.
 ```html
-    <form method="post" enctype="multipart/form-data">
-    ...
+<form method="post" enctype="multipart/form-data">
+...
 ```
 
 ## File Download
@@ -134,14 +138,15 @@ urls.py는 다음과 같다.
 urlpatterns = [
     ...
     path('download', views.download, name='download'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ...
+]
 ```
 
 detail.html의 이미지에 다운로드의 링크를 건다.
 ```html
-    <a href="/download?poster={{movie.mposter}}">
-        <img class="poster" src="/media/{{movie.mposter}}">
-    </a>
+<a href="/download?poster={{movie.mposter}}">
+    <img class="poster" src="/media/{{movie.mposter}}">
+</a>
 ```
 
 ## File Update
@@ -211,7 +216,7 @@ urlpatterns = [
     ...
     path('update/<int:mcode>', views.update, name='update'),
     ...
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 ```
 
 ## File Delete
@@ -240,7 +245,7 @@ urlpatterns = [
     ...
     path('delete/<int:mcode>', views.delete, name='delete'),
     ...
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 ```
 
 detail.html에서의 처리는 다음과 같다.(jQuery 사용함)
