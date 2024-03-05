@@ -358,7 +358,7 @@ urlpatterns = [
 
 ### templates/header.html
 ```html
-<h1><a href="/">Django 사이트{{title}}</a></h1>
+<h1><a href="/">Django 사이트{{site_title}}</a></h1>
 <hr>
 ```
 
@@ -370,7 +370,7 @@ urlpatterns = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>Django Site</title>
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
 </head>
 <body>
@@ -384,7 +384,7 @@ urlpatterns = [
 ```html
 {% extends "master.html" %}
 {% block section %}
-<h1>{{site_title}}</h1>
+<h1>{{title}}</h1>
 <p>{{data}}</p>
 {% endblock %}
 ```
