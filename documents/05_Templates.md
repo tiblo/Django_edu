@@ -174,7 +174,7 @@ def testing(request):
     test_list = ('아메리카노','카페라떼','카페모카','카푸치노','녹차')
     context = {
         'title': '테스트용 페이지',
-        'data': '출력할 내용',,
+        'data': '출력할 내용',
         'date_data': datetime.datetime.now(),
         'count': 1,
         'tlist': test_list,
