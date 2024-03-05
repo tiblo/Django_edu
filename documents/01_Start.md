@@ -125,7 +125,8 @@ deactivate
             "request": "launch",
             "program": "${workspaceFolder}/[프로젝트폴더]/manage.py",
             "args": [
-                "runserver"
+                "runserver",
+                "--insecure"
             ],
             "django": true,
             "justMyCode": true,
