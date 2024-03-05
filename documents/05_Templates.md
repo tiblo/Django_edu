@@ -209,6 +209,7 @@ urlpatterns = [
     {% with name='user' %}
     <h2>{{name}}님 안녕하세요.</h2>
     {% endwith %}
+    <hr>
     {% if count == 0 %}
         <p>첫 방문입니다.</p>
     {% elif count == 1 %}
