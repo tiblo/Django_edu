@@ -298,7 +298,6 @@ project_name/
 ## Static url 
 myproject/myproject 폴더의 urls.py에 static url을 작성한다.
 ```python
-from django.urls import re_path as url
 from django.conf import settings
 
 urlpatterns = [
