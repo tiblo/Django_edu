@@ -8,8 +8,9 @@
 <body>
     <h1>{{title}}</h1>
     <p>{{data}}</p>
+    <p>{{date_data|date:'Y-m-d'}}</p>
     <hr>
-    {% with name="user" %}
+    {% with name='user' %}
     <h2>{{name}}님 안녕하세요.</h2>
     {% endwith %}
     {% if count == 0 %}
