@@ -315,10 +315,6 @@ html 파일에서 정적 자원을 활용하기 위해서 사용하는 태그.<b
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Home</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 ...
 ```
 ## static 활용 태그 - {% static '경로/파일' %}
