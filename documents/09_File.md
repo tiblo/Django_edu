@@ -39,7 +39,7 @@ FileField 또는 ImageField에는 upload_to로 파일을 저장할 경로를 지
 저장을 위한 기본 경로의 설정은 settings.py에서 처리한다.<br>
 ```python
 ...
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 ```
 
@@ -65,7 +65,7 @@ movieinfo/
 │   └── images
 ├── movieinfo/
 └── movie/
-└── static/ 
+    └── static/ 
 ```
 
 form.py의 ModelForm에 각 입력 필드의 속성을 설정
