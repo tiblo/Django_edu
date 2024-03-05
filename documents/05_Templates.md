@@ -200,7 +200,7 @@ urlpatterns = [
     <h1>{{title}}</h1>
     <p>{{data}}</p>
     <hr>
-    {% with name="user" %}
+    {% with name='user' %}
     <h2>{{name}}님 안녕하세요.</h2>
     {% endwith %}
     {% if count == 0 %}
@@ -271,7 +271,7 @@ STATIC_URL = 'static/'
 ...
 ```
 
-프로젝트 폴더 하위에 static 폴더를 작성하여 해당 파일을 저장
+앱 폴더 하위에 static 폴더를 작성하여 해당 파일을 저장
 
 ```
 project_name/
@@ -294,7 +294,6 @@ myproject/myproject 폴더의 urls.py에 static url을 작성한다.
 ```python
 from django.urls import re_path as url
 from django.conf import settings
-from django.views.static import serve
 
 urlpatterns = [
     ...    
@@ -344,7 +343,7 @@ urlpatterns = [
 ]
 ```
 
-### static/mystyle.css
+### static/css/mystyle.css
 ```css
 * {
     background-color: beige;
