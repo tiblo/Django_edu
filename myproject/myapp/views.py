@@ -5,6 +5,7 @@ from .models import DataTbl
 from .form import DataForm, UserForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+import datetime
 
 # Create your views here.
 # def index(request):
@@ -101,3 +102,11 @@ def logout_view(request):
         logout(request)
         messages.success(request, '로그아웃 성공')
         return redirect('index')
+    
+def page_not_found(request, exception):
+    context = {
+        'title': ' - 페이지 없음'
+    }
+    response = render(request, 'error/404.html', context)
+    response.status_code= 404
+    return response
