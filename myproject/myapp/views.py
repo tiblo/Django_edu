@@ -26,6 +26,7 @@ def testing(request):
     context = {
         'title': '테스트용 페이지',
         'data': '출력할 내용',
+        'date_data': datetime.datetime.now(),
         'count': 1,
         'tlist': test_list,
     }
