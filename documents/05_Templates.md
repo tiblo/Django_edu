@@ -74,7 +74,7 @@ template.html
 
 #### 변수 생성 태그 : {% with %}
 Template tag를 사용하여 직접 변수를 생성하여 활용할 수 있음(띄어쓰기 주의)
-* 시작 태그 - {% with name="식별자" %}
+* 시작 태그 - {% with name="값" %}
 * 종료 태그 - {% endwith %}<br>
 ```html
 {% with name='user' %}
