@@ -36,11 +36,13 @@ views.py
 ```python
 from django.http import HttpResponse
 from django.template import loader
+import datetime
 
 def testing(request):
     template = loader.get_template('template.html')
     context = {
         'data': '출력할 내용',
+        'date_data': datetime.datetime.now(),
     }
     return HttpResponse(template.render(context, request))
 ```
@@ -59,7 +61,7 @@ template.html
 ```python
 {{ date_data|date:'Y-m-d'}}
 ```
-> 결과 : 2024-01-14
+> 결과 : 2024-04-06
 
 #### 주요 필터
 주요 필터 관련 문서 : https://docs.djangoproject.com/ko/4.2/ref/templates/builtins/#std-templatefilter-add
