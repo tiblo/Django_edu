@@ -165,12 +165,17 @@ CSRF 공격을 방어하기 위한 태그로 주로 ```<form>```에서 ModelForm
 ### myapp/views.py
 ```python
 ...
+from django.http import HttpResponse
+from django.template import loader
+import datetime
+
 def testing(request):
     template = loader.get_template('template.html')
     test_list = ('아메리카노','카페라떼','카페모카','카푸치노','녹차')
     context = {
         'title': '테스트용 페이지',
-        'data': '출력할 내용',
+        'data': '출력할 내용',,
+        'date_data': datetime.datetime.now(),
         'count': 1,
         'tlist': test_list,
     }
@@ -199,6 +204,7 @@ urlpatterns = [
 <body>
     <h1>{{title}}</h1>
     <p>{{data}}</p>
+    <p>{{date_data|date:'Y-m-d'}}</p>
     <hr>
     {% with name='user' %}
     <h2>{{name}}님 안녕하세요.</h2>
