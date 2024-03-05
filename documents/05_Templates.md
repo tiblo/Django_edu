@@ -262,38 +262,43 @@ master.html은 모든 페이지의 공통된 부분을 처리하는 페이지이
 Static resource(정적 자원)는 배경 이미지, 스타일 시트, Javascript 등을 나타낸다.
 
 ## static 폴더 설정
-project_name/project_name/setting.py에 이미 설정되어 있다.
+project_name/project_name/setting.py에 이미 설정되어 있다. 다음을 추가한다.
 ```python
 ...
 STATIC_URL = 'static/'
 ...
 ```
 
-myapp 폴더 하위에 static 폴더를 작성하여 해당 파일을 저장
+프로젝트 폴더 하위에 static 폴더를 작성하여 해당 파일을 저장
 
 ```
 project_name/
 ├── manage.py
 ├── project_name/
 └── app_name/
-    ├── migrations/
-    ├── static/
-    │   ├── css/
-    │   ├── images/
-    │   └── js/
-    ├── templates/
-    ├── __init__.py
-    ├── admin.py
-    ├── apps.py
-    ├── models.py
-    ├── tests.py
-    └── views.py
+    └── static/
+        ├── css/
+        ├── images/
+        └── js/
 ```
+
 * 각 자원들은 폴더로 구분하여 처리하는 것이 좋다.
     * 이미지 파일 - images
     * 스타일 시트 - css
     * Javascript - js
- 
+
+## Static url 
+myproject/myproject 폴더의 urls.py에 static url을 작성한다.
+```python
+from django.urls import re_path as url
+from django.conf import settings
+from django.views.static import serve
+
+urlpatterns = [
+    ...    
+] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
+```
+
 ## Template 안에서 static 불러오기 - {% load static %}
 html 파일에서 정적 자원을 활용하기 위해서 사용하는 태그.<br>
 반드시 자원 활용 전에 먼저 작성되어야 한다.
@@ -321,7 +326,7 @@ static 파일을 활용하는 요소에서 사용하는 태그.(위의 예와 �
 def somepage(request):
     template = loader.get_template('somepage.html')
     context = {
-        'site_title': 'Myapp',
+        'site_title': ' - Myapp',
         'title': '어떤 페이지',
         'data': 'master.html을 활용한 template 확장',
     }
@@ -346,7 +351,7 @@ urlpatterns = [
 
 ### templates/header.html
 ```html
-<h1><a href="/">{{site_title}}</a></h1>
+<h1><a href="/">Django 사이트{{title}}</a></h1>
 <hr>
 ```
 
@@ -372,7 +377,7 @@ urlpatterns = [
 ```html
 {% extends "master.html" %}
 {% block section %}
-<h1>{{title}}</h1>
+<h1>{{site_title}}</h1>
 <p>{{data}}</p>
 {% endblock %}
 ```
