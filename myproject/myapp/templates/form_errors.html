@@ -1,0 +1,16 @@
+{% if form.errors %}
+<div class="form_error">
+    {% for field in form %}
+        {% for error in field.errors %}  <!-- 필드 오류를 출력한다. -->
+            <div class="field_error">
+                <span>- {{ field.label }} : {{ error }}</span>                
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}   <!-- 넌필드 오류를 출력한다. -->
+        <div class="non_field_errors">
+            <span>{{ error }}</span>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}

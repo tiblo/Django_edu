@@ -1,0 +1,63 @@
+.wrap {
+    width: 900px;
+    margin: 0 auto;
+}
+.dtable {
+    margin: 0 auto;
+}
+.wrap>div {
+    font-size: 1.5em;
+    width: 500px;
+    border: 1px solid;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.i-form {
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.i-form>div {
+    display: flex;
+    justify-content: space-between;
+}
+.i-form>div>input {
+    width: 300px;
+}
+input[type="submit"] {
+    font-size: 1.1em;
+}
+.form_error {
+    padding: 5px;
+    overflow: hidden;
+}
+.field_error {
+    color: red; 
+    font-size: 0.6em;
+}
+.errorlist {
+    padding: 0!important;
+    margin: 0;
+    list-style: none;
+}
+.non_field_errors {
+    color: red; 
+    font-size: 0.6em;
+}
+
+.j-form {
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.j-form>div {
+    display: flex;
+    justify-content: space-between;
+}
+.j-form>div>input {
+    width: 300px;
+}
