@@ -158,3 +158,6 @@ deactivate
     ]
 }
 ```
+
+![image](https://github.com/tiblo/Django_edu/assets/34559256/e9440a41-b42a-48ac-a74f-b3deecbf39c3)
+
