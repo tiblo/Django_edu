@@ -3,21 +3,9 @@
 
 ![image](https://github.com/tiblo/Django/assets/34559256/c9d51400-d02e-43cf-8123-0b0b7b95282e)
 
-## 명령 팔레트에서 여는 방법
+## 실행
 
-![image](https://github.com/tiblo/Django/assets/34559256/1c43b057-4e25-4684-87da-bea471045f1a)
-
-> 또는 'F1'
-
-![image](https://github.com/tiblo/Django/assets/34559256/7cc54dbf-7863-4334-941a-d77fd3113d5c)
-
-```
-SQLite: Open Database
-```
-
-해당 폴더에 SQLite 파일이 있을 경우 자동으로 링크가 나오지만 없을 경우 
-
-![image](https://github.com/tiblo/Django/assets/34559256/cbc7faaf-0c47-4428-bede-9ad6a4ed33be)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/7a11e332-c695-43b1-8abb-c3f0a13803f4)
 
 파일 선택창으로 SQLite db 파일을 열 수 있다.
 
