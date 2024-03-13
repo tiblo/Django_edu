@@ -27,6 +27,6 @@ def index(request):
     return HttpResponse(template.render(context, request))
 ```
 
-```page = request.GET.get('page', 1)``` - request의 parameter로 넘어오는 page 번호를 받아서 처리한다.
+```page = request.GET.get('page', 1)``` : request의 parameter로 넘어오는 page 번호를 받아서 처리한다.
 
 만약, page가 넘어오지 않을 경우(처음 방문했을 경우)에는 1페이지가 되도록 default 값을 1로 설정한다.
