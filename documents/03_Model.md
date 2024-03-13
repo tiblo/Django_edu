@@ -245,7 +245,7 @@ class DataTbl(models.Model):
         verbose_name_plural = '입력데이터들'
 ```
 
-# Database 초기화
+## Database 초기화
 - 먼저 mirgrations 폴더의 파일 중 __init__.py를 제외한 나머지 파일을 모두 삭제한다.
 - 다음 db.sqlite3 파일을 삭제한다.
 - migration을 재수행한다.
