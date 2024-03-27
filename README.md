@@ -10,16 +10,16 @@ Django는...
 * 코드 없음 지향: 코드 없는 프레임워크가 아니지만 개발자가 코드를 사용하지 않고 활용할 수 있는 패키지가 있다.
 * 다용성: 언급한 바와 같이 Django는 특히 데이터베이스 기반 웹사이트에 적합하며, 모든 유형의 웹 사이트를 만드는 데 사용할 수 있다.
 
-## 가상환경 실행 시 보안오류 처리
-* Windows Powershell을 관리자 권한으로 실행하여 다음 명령을 실행한다.
-```
-set-ExecutionPolicy RemoteSigned
-```
-중간에 y 입력할 것.
-
 # Django Cycle
 > WSGI(Web Server Gateway Interface)는 웹 서버 소프트웨어와 파이썬으로 작성된 웹 응용 프로그램 간의 표준 인터페이스.<br>
   Django 프레임워크는 웹 서버를 통해 넘어오는 client의 request를 WSGI Server(Middleware)로 처리.<br>
   ASGI(Asynchronous Server Gateway Interface)는 비동기 웹 서버, 프레임워크 및 애플리케이션 간의 표준 인터페이스를 제공하기 위한 WSGI의 정신적 후속 버전.
 
 ![rLfSC](https://github.com/tiblo/Django/assets/34559256/686e9222-c642-483a-9732-4462ec481082)
+
+## 가상환경 실행 시 보안오류 처리
+* Windows Powershell을 관리자 권한으로 실행하여 다음 명령을 실행한다.
+```
+set-ExecutionPolicy RemoteSigned
+```
+중간에 y 입력할 것.
