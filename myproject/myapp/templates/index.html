@@ -10,10 +10,8 @@
 </script>
 {% endblock  %}
 {% block section %}
-{% if user.is_authenticated %}
 <a href="/write">[데이터입력]</a>
 <hr>
-{% endif %}
 <h2>데이터 목록</h2>
 <table border="1" class="dtable">
     <thead>
@@ -31,23 +29,17 @@
         <tr>
             <td>{{item.id}}</td>            
             <td>
-                {% if user.is_authenticated %}
                 {# query parameter #}
                 {% comment %} <td><a href="update?id={{item.id}}">{{item.str_data}}</a></td> {% endcomment %}
                 {# path parameter #}
-                <a href="{% url 'update' id=item.id %}">{{item.str_data}}</a>
-                {% else %}
-                {{item.str_data}}
-                {% endif %}
+                <a href="{% url 'update' id=item.id %}">{{item.str_data}}</a>                
             </td>
             <td>{{item.int_data}}</td>
             {# filter 활용 예 : 날짜를 출력하는 형식 지정. #}
             <td>{{item.reg_data|date:'Y년 n월 j일'}}</td>
             <td>{{item.upd_data}}</td>
             <td>
-                {% if user.is_authenticated %}
                 <a href="{% url 'delete' id=item.id %}">[삭제]</a>
-                {% endif %}                
             </td>
         </tr>
         {% empty %}
