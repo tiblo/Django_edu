@@ -46,18 +46,3 @@ input[type="submit"] {
     color: red; 
     font-size: 0.6em;
 }
-
-.j-form {
-    height: 300px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.j-form>div {
-    display: flex;
-    justify-content: space-between;
-}
-.j-form>div>input {
-    width: 300px;
-}
