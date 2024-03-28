@@ -119,6 +119,26 @@ UserCreationForm은 각 필드에 대한 유효성 검사 코드가 내장되어
 <a href="join">[회원가입]</a>
 ```
 
+#### 스타일 추가
+```css
+
+.j-form {
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.j-form>div {
+    display: flex;
+    justify-content: space-between;
+}
+.j-form>div>input {
+    width: 300px;
+}
+```
+
+
 ### view 작성
 views.py에는 write나 update와 마찬가지로 GET과 POST에 따라 구분하여, 가입 페이지를 출력하거나 가입 처리를 수행하도록 코드를 작성한다.
 
