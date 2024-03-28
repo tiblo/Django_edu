@@ -88,25 +88,3 @@ def page_not_found(request, exception):
     response = render(request, 'error/404.html', context)
     response.status_code= 404
     return response
-
-def join(request):
-    if request.method == 'POST':
-        form = UserForm(request.POST)
-        if form.is_valid():
-            form.save()
-            # 회원 가입 후 로그인을 자동으로 처리할 경우
-            # username = form.cleaned_data.get('username')
-            # row_password = form.cleaned_data.get('password1')
-            # user = authenticate(username=username , password=row_password)
-            # login(request, user)
-            messages.success(request, '가입 성공')
-            return redirect('index')
-    else: # Get 요청일 떄
-        form = UserForm()        
-    return render(request, 'join.html', {"form": form})
-
-def logout_view(request):
-    if request.method == 'GET':
-        logout(request)
-        messages.success(request, '로그아웃 성공')
-        return redirect('index')
