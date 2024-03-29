@@ -84,6 +84,21 @@ views.py에 작성된 view 함수(또는 클래스)를 지정.
 #### kwargs
 임의의 키워드 인수들은 대상 view에 딕셔너리로 전달.
 
+urls.py
+```python
+   ...
+   path('', views.index, kwargs={'test':'test_data'}, name='index'),
+```
+
+views.py
+```python
+def index(request, test):
+   print(test) 
+   ...
+
+# 출력 : test_data
+```
+
 #### name
 URL에 이름을 지으면, 템플릿을 포함한 Django 어디에서나 명확하게 참조할 수 있다.<br>
 이 기능을 이용하여, 단 하나의 파일만 수정해도 project 내의 모든 URL패턴을 바꿀 수 있도록 도와준다.
