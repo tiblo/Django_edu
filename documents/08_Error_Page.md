@@ -5,7 +5,7 @@
 앱 이름 - myapp<br>
 
 ## Setting.py
-프로젝트를 생성하면 Debug 모드는 기본적을 True로 설정된다. 이 경우 Django의 기본 에러페이지를 사용하기 때문에 False로 변경한다.
+프로젝트를 생성하면 Debug 모드는 기본적으로 True로 설정된다. 이 경우 Django의 기본 에러페이지를 사용하기 때문에 False로 변경한다.
 ```python
 ...
 # SECURITY WARNING: don't run with debug turned on in production!
