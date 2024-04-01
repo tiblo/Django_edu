@@ -251,6 +251,33 @@ def data(request, id):
     ...
 ```
 
+updateForm.html은 다음과 같다.
+```html
+{% extends "master.html" %}
+{% load static %}
+{% block section %}
+<h2>데이터 수정</h2>
+<hr>
+<div>
+    <form method="post" class="i-form">
+        {% csrf_token %}
+        {% comment %} 
+        {{form}}
+        {% endcomment %}
+        <div>
+            <label>문자열</label>
+            {{ form.str_data }}
+        </div>
+        <div>
+            <label>숫자</label>
+            {{ form.int_data }}
+        </div>
+        <input type="submit" value="Send">
+    </form>
+</div>
+{% endblock %}
+```
+
 ### get_object_or_404()
 QuerySet의 get()는 검색한 데이터가 없을 경우 DoesNotExist 메시지를 반환한다. 이 결과를 처리할 때 Http404 예외를 발생시켜 사용자에게 해당 결과가 없음을 보여주어야 한다.<br>
 즉, get_object_or_404()는 get()과 404 처리를 합친 것이다.
