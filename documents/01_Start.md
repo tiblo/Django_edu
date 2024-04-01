@@ -149,7 +149,7 @@ deactivate
         {
             "label": "activateVirturalEnv",
             "type": "shell",
-            "command": "${workspaceFolder}/myenv/Scripts/activate",
+            "command": "${workspaceFolder}/[가상환경폴더]/Scripts/activate",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
