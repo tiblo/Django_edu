@@ -371,8 +371,10 @@ urlpatterns = [
     <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
 </head>
 <body>
-    {% include "header.html" %}
-    {% block section %}{% endblock %}
+    <div class="wrap">
+        {% include "header.html" %}
+        {% block section %}{% endblock %}
+    </div>
 </body>
 </html>
 ```
