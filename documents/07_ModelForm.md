@@ -106,6 +106,9 @@ HTML 전송 method에 따라 '입력 페이지로의 이동'인지 '데이터의
 * request.method == 'POST' : 입력 데이터 DB insert
 
 ```python
+from django.shortcuts import render, redirect
+...
+
 def write(request):
     if request.method == 'POST':
         data_form = DataForm(request.POST)
@@ -173,6 +176,8 @@ urlpatterns = [
 
 view method(views.py)
 ```python
+from django.shortcuts import render, redirect, get_object_or_404
+
 def update(request, id):
     data = get_object_or_404(DataTbl, id=id)
     if request.method == 'POST':
