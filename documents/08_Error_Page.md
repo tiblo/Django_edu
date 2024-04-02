@@ -53,7 +53,7 @@ handler500 = 'myapp.views.server_error'
 ```python
 def page_not_found(request, exception):
     context = {
-            'title': "처음으로",
+            'site_title': " - 처음으로",
         }
     response = render(request, "error/404.html", context)
     response.status_code=404
@@ -61,7 +61,7 @@ def page_not_found(request, exception):
 
 def server_error(request, exception):
     context = {
-            'title': "처음으로",
+            'site_title': " - 처음으로",
         }
     response = render(request, "error/500.html", context)
     response.status_code=500
