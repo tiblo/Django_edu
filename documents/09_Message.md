@@ -39,3 +39,45 @@ html
 {% endif %}
 ```
 message.tags를 class로 활용하여 style을 줄 수 있다(bootstrap에서도 활용할 수 있음)
+
+## 작성 성공 메시지 출력 예제
+master.html에 자바스크립트 코드가 들어갈 블록을 추가한다.
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Site</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    {% block javascript %}{% endblock  %}
+</head>
+```
+
+views.py의 write 함수에 메시지 관련 코드를 추가한다.
+```python
+...
+def write(request):
+    if request.method == 'POST':
+        data_form = DataForm(request.POST)
+        if data_form.is_valid():
+            data = data_form.save(commit=False)
+            data.save()
+            messages.success(request, '저장 성공')
+            return redirect('index')
+    else:
+...
+
+index.html에 메시지 출력 코드를 작성한다.
+```html
+...
+{% block javascript %}
+<script>
+    {% if messages %}
+        {% for msg in messages %}
+            alert('{{msg.message}}')
+        {% endfor %}
+    {% endif %}
+</script>
+{% endblock  %}
+...
+```
+
