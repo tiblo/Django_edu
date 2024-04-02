@@ -65,6 +65,7 @@ def write(request):
             return redirect('index')
     else:
 ...
+```
 
 index.html에 메시지 출력 코드를 작성한다.
 ```html
