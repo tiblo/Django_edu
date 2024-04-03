@@ -58,65 +58,6 @@ class SomeUrlClass(View):
 ```
 
 http method에 대한 처리를 조건문 대신 메소드 명으로 처리하여 코드 구조가 깔금하고 객체지향 기법을 활용할 수 있지만, FBV에 비하여 코드가 복잡하고 가독성이 떨어짐
-#### Mixin
-객체 지향 프로그램에서 많이 쓰이는 개념으로 간단하게 말하여 필요한 메소드들을 포함하고 있는 클래스를 이용하여 상속없이 다른 클래스에 기능을 더해주는 방식. 서로 다른 컴포넌트에서 유사한 기능을 공유하고자 할 때 사용하며, Vue나 React에서 널리 사용됨.
-> 예를 들어, 여러 테이블을 생성하기 위해 model을 따로따로 작성하게 되는데 공통된 컬럼이 있다면(생성 시간 저장, 수정 시간 저장 등) 이러한 컬럼들을 분류하여 Mixin 클래스로 작성하고, 각 model 클래스는 필요한 컬럼이 작성된 Mixin 클래스를 상속받아서 작성한다.
-
-Mixin 예제(by ChatGpt)
-```python
-class Vehicle:
-    def __init__(self, brand, model):
-        self.brand = brand
-        self.model = model
-
-    def display_info(self):
-        print(f"Brand: {self.brand}, Model: {self.model}")
-
-
-class EngineMixin:
-    def start_engine(self):
-        print("Engine started.")
-
-
-class ElectricMixin:
-    def charge_battery(self):
-        print("Battery charging...")
-
-
-class Car(Vehicle, EngineMixin):
-    def __init__(self, brand, model):
-        super().__init__(brand, model)
-
-
-class ElectricCar(Vehicle, EngineMixin, ElectricMixin):
-    def __init__(self, brand, model):
-        super().__init__(brand, model)
-
-
-car1 = Car("Toyota", "Corolla")
-car1.display_info()
-car1.start_engine()
-
-print()
-
-car2 = ElectricCar("Tesla", "Model S")
-car2.display_info()
-car2.start_engine()
-car2.charge_battery()
-
-print()
-```
-
-실행 결과
-```
-Brand: Toyota, Model: Corolla
-Engine started.
-
-Brand: Tesla, Model: Model S
-Engine started.
-Battery charging...
-```
-
 
 ## 가상환경 실행 시 보안오류 처리
 * Windows Powershell을 관리자 권한으로 실행하여 다음 명령을 실행한다.
