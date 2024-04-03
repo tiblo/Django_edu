@@ -46,7 +46,7 @@ Superuser created successfully.
 ## Model 보이기
 처음 로그인한 화면은 다음과 같다.
 
-![image](https://github.com/tiblo/Django/assets/34559256/b162c7b7-316d-4d10-a002-65087d54eac1)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/7a3766a0-3ca5-4faa-b478-5b03cf6c9193)
 
 myapp/admin.py에 관리해야할 Model을 포함시켜야 한다.
 ```python
@@ -67,16 +67,16 @@ from .models import *
 admin.site.register(클래스이름)
 ```
 
-![image](https://github.com/tiblo/Django/assets/34559256/210e8d44-92af-4f5d-98b1-b633a8cc092a)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/a8c65d91-f413-4706-b25d-03103735c28e)
 
 이 화면에서 해당 테이블에 데이터를 추가하거나 수정/삭제할 수 있다.
 
 ## 정보 입력
-![image](https://github.com/tiblo/Django/assets/34559256/315c9616-a3c8-41c9-907e-18079b8a0812)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/3f9c1305-5c5f-496b-a0d1-9aa9e52173a4)
 
 화면에서 정보를 입력하고 '저장'하면 다음과 같이 테이블이 저장되고 확인할 수 있다.
 
-![image](https://github.com/tiblo/Django/assets/34559256/d9324586-22fe-44de-a4cd-d4fb2935c470)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/baf19bde-63ef-4214-9344-f7e3415249df)
 
 
 ## Admin 페이지 수정
@@ -85,7 +85,7 @@ admin.site.register(클래스이름)
 ```python
 admin.site.site_header = 'My Project Admin'
 ```
-![image](https://github.com/tiblo/Django/assets/34559256/5b88c957-4b4e-46cb-84bb-bcf6620f40fd)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/879d2200-bd26-4f40-98ec-298e8941e097)
 
 페이지 제목이 'Django 관리'에서 'My Project Admin'으로 변경된다.
 
@@ -95,7 +95,7 @@ admin.site.site_header = 'My Project Admin'
 ```python
 admin.site.site_title = 'My Admin'
 ```
-![image](https://github.com/tiblo/Django/assets/34559256/72178bec-b911-4169-8bb5-28ae618c34fc)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/d3b094b2-fe2a-48df-992e-477a2e7adbb3)
 
 탭의 제목이 '사이트 관리 | Django 사이트 관리'에서 '사이트 관리 | My Admin'으로 변경된다.
 
@@ -105,7 +105,7 @@ admin.site.site_title = 'My Admin'
 ```python
 admin.site.index_title = 'Project Apps'
 ```
-![image](https://github.com/tiblo/Django/assets/34559256/a95a68cd-f606-4883-a044-fe049b927272)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/5292b005-d987-4298-8c15-f5a5a9659b22)
 
 목록 제목이 '사이트 관리'에서 'Project Apps'로 변경된다.(탭 제목도 함께 변경된다.)
 
@@ -118,7 +118,7 @@ class DataTblAdmin(admin.ModelAdmin):
 
 admin.site.register(DataTbl, DataTblAdmin)
 ```
-![image](https://github.com/tiblo/Django/assets/34559256/a0fbb256-194e-41a4-b0da-9e9be05a2d4e)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/a6b2f83c-6a27-4a72-9b71-fbdf751ea698)
 
 > 입력 양식 등 다양한 admin 사이트의 수정이 가능함
 
