@@ -5,7 +5,7 @@ admin 페이지의 url
 ```
 http://127.0.0.1:8000/admin
 ```
-![image](https://github.com/tiblo/Django/assets/34559256/0b0cb737-7845-4cdb-81f0-cdde4e9b981f)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/b98361bb-fce5-4643-bebd-c4d7775aae0a)
 
 (하위)myproject 폴더의 urls.py에 admin 페이지에 대한 경로가 등록되어 있음.
 ```python
