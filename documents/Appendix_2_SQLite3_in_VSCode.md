@@ -11,4 +11,4 @@
 
 > 탐색기 하단(타임라인 밑)에 'SQLITE EXPLORER'가 보이면서 DB의 내용 확인 및 CRUD 작업을 할 수 있다.
 
-![image](https://github.com/tiblo/Django/assets/34559256/7038aebd-e2ca-4bca-a244-83730665f1cf)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/b2b1c8b4-633d-424c-a52e-152452e43df1)
