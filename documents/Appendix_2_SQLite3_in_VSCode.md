@@ -1,7 +1,7 @@
 # VSCode에서 SQLite3 보기
 > 확장(Extentions)에서 'SQLite' 플러그인 설치
 
-![image](https://github.com/tiblo/Django/assets/34559256/c9d51400-d02e-43cf-8123-0b0b7b95282e)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/88c83e47-a2c8-4fc2-b20e-a8ce177c19c4)
 
 ## 실행
 
