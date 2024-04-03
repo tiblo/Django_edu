@@ -233,7 +233,7 @@ urlpatterns = [
 ## Template 확장 - Master Template(또는 Base Template)
 header 영역, navigation 영역, footer영역 등 모든 페이지(template)에서 동일한(공통적인) 부분을 하나의 template에 모아 놓는 방식
 
-![image](https://github.com/tiblo/Django/assets/34559256/ef9d5d8b-cde2-4511-8415-9499159a67ee)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/58cb53e5-7d00-4a0e-85d9-2f1082fc3d46)
 
 그림과 같은 구조의 페이지를 작성할 경우, master.html은 다음과 같이 작성한다.
 ```html
