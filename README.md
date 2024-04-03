@@ -59,9 +59,3 @@ class SomeUrlClass(View):
 
 http method에 대한 처리를 조건문 대신 메소드 명으로 처리하여 코드 구조가 깔금하고 객체지향 기법을 활용할 수 있지만, FBV에 비하여 코드가 복잡하고 가독성이 떨어짐
 
-## 가상환경 실행 시 보안오류 처리
-* Windows Powershell을 관리자 권한으로 실행하여 다음 명령을 실행한다.
-```
-set-ExecutionPolicy RemoteSigned
-```
-중간에 y 입력할 것.
