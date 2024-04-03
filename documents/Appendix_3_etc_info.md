@@ -112,7 +112,7 @@ setting.json에 다음과 같이 추가(Auto Close Tag 설정과 함께 추가)
 DB 내용과 동적 업로드 파일(media) 등을 초기화 할 경우 해당 파일을 제거하고 압축
 
 
-## 가상환경 실행 시 보안오류 처리
+# 가상환경 실행 시 보안오류 처리
 * Windows Powershell을 관리자 권한으로 실행하여 다음 명령을 실행한다.
 ```
 set-ExecutionPolicy RemoteSigned
