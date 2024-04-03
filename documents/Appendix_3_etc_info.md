@@ -110,3 +110,11 @@ setting.json에 다음과 같이 추가(Auto Close Tag 설정과 함께 추가)
 프로젝트 폴더만 압축 -> 새 환경(컴퓨터)의 작업 폴더에서 압축해제 -> 가상환경 설치 -> 개발용 라이브러리 설치(django 등) -> 실행
 
 DB 내용과 동적 업로드 파일(media) 등을 초기화 할 경우 해당 파일을 제거하고 압축
+
+
+## 가상환경 실행 시 보안오류 처리
+* Windows Powershell을 관리자 권한으로 실행하여 다음 명령을 실행한다.
+```
+set-ExecutionPolicy RemoteSigned
+```
+중간에 y 입력할 것.
