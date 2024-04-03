@@ -15,7 +15,7 @@ Django는...
   Django 프레임워크는 웹 서버를 통해 넘어오는 client의 request를 WSGI Server(Middleware)로 처리.<br>
   ASGI(Asynchronous Server Gateway Interface)는 비동기 웹 서버, 프레임워크 및 애플리케이션 간의 표준 인터페이스를 제공하기 위한 WSGI의 정신적 후속 버전.
 
-![rLfSC](https://github.com/tiblo/Django/assets/34559256/686e9222-c642-483a-9732-4462ec481082)
+![image](https://github.com/tiblo/Django/assets/34559256/686e9222-c642-483a-9732-4462ec481082)
 
 # MTV 패턴
 MTV(Model, Template, View) 패턴은 웹 개발에서 활용하는 MVC 패턴에 대응되는 Django의 디자인 패턴이다.
