@@ -1,11 +1,11 @@
 # 기본 확장팩
 ## Pyton
 
-![image](https://github.com/tiblo/Django/assets/34559256/3ff530f0-b9fb-46f7-bb7a-2c3bbd54a772)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/b3bc83d5-9587-4769-ae9b-ec598bcb6079)
 
 ## Django
 
-![image](https://github.com/tiblo/Django/assets/34559256/80a82821-ef5b-44b9-b23a-907ac2e1c3ed)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/35f52596-e398-43d8-ba82-f289bb6ce1a7)
 
 ## Auto Close Tag
 Django template 작성 시 유용한 확장팩
@@ -14,11 +14,11 @@ Django template 작성 시 유용한 확장팩
 
 설정에서 emmet 검색 후 '항목 추가'로 다음과 같이 설정하면 Django HTML에서 HTML 자동완성 기능을 사용할 수 있음
 
-![image](https://github.com/tiblo/Django/assets/34559256/49f8f076-e24f-4f5f-89d9-4451cc3fb049)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/6f61912a-def3-468c-b666-ed7ddbf45275)
 
 하지만 불편함.
 
-![image](https://github.com/tiblo/Django/assets/34559256/62987317-bb8d-4375-8223-ca09e5689b48)
+![image](https://github.com/tiblo/Django_edu/assets/34559256/fafe6d22-e38f-48c0-bf76-92cf26213fc2)
 
 VSCode의 setting.json에 다음을 추가
 ```
