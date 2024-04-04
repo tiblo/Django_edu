@@ -95,7 +95,7 @@ Battery charging...
 
 ## Django-HTML과 HTML 자동완성
 setting.json에 다음과 같이 추가(Auto Close Tag 설정과 함께 추가)
-```json
+```
 {
     ...,
     "emmet.includeLanguages": {
