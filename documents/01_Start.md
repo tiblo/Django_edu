@@ -6,8 +6,8 @@
 > Microsoft Store를 통해 설치하면 vscode에서 바로 사용 가능
 
 3. vscode 확장(Extension) 
-* Django Extension
 * Python Extension
+* Django Extension
 
 ---
 # Django 프로젝트 생성 단계
