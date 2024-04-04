@@ -3,7 +3,7 @@
 ## *args
 * args는 arguments의 줄임말로 함수에서 다수의 인자를 받을 때 사용.
 * args는 튜플(tuple, 수정 불가 배열) 형태임.
-```
+```python
 def some_function(*args):
     for arg in args:
         # 반복 코드
@@ -16,7 +16,7 @@ some_function(1, 2)
 ## **kwargs
 * kwargs는 keyword arguments의 줄임말.
 * kwargs는 딕셔너리(dictionary, key=value) 형태임.
-```
+```python
 def some_function(**kwargs):
     for key, value in kwargs.item():
         # 반복 코드
@@ -95,7 +95,7 @@ Battery charging...
 
 ## Django-HTML과 HTML 자동완성
 setting.json에 다음과 같이 추가(Auto Close Tag 설정과 함께 추가)
-```
+```json
 {
     ...,
     "emmet.includeLanguages": {
