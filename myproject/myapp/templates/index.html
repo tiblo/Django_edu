@@ -30,7 +30,7 @@
             <td>{{item.id}}</td>            
             <td>
                 {# query parameter #}
-                {% comment %} <td><a href="update?id={{item.id}}">{{item.str_data}}</a></td> {% endcomment %}
+                {% comment %} <a href="update?id={{item.id}}">{{item.str_data}}</a> {% endcomment %}
                 {# path parameter #}
                 <a href="{% url 'update' id=item.id %}">{{item.str_data}}</a>                
             </td>
