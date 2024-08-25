@@ -34,7 +34,8 @@ py -m venv '가상환경이름'
 ```
 pip install django
 ```
-가상환경에 django가 설치됨<br>
+가상환경에 django가 설치됨
+
 * 설치 확인
 ```
 pip freeze
