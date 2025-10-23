@@ -47,7 +47,7 @@ def testing(request):
     return HttpResponse(template.render(context, request))
 ```
 
-context는 views에서 전송하는 데이터가 있을 경우 작성하는 것으로, 만일 전송할 데이터가 없는 경우 ```{ }```를 비워 놓거나 다음과 같이 작성한다.
+context는 views에서 전송하는 데이터가 있을 경우 작성하는 것으로, 만일 전송할 데이터가 없는 경우 ```{ }```를 비워 놓거나 context를 작성하지 않고 다음과 같이 처리한다.
 
 ```python
     return HttpResponse(template.render({}, request))
