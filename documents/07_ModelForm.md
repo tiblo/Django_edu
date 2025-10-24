@@ -110,13 +110,7 @@ from django.shortcuts import render, redirect
 ...
 
 def write(request):
-    if request.method == 'POST':
-        data_form = DataForm(request.POST)
-        if data_form.is_valid():
-            data = data_form.save(commit=False)
-            data.save()
-            return redirect('index')
-    else:
+    if request.method == 'GET':
         title = "처음으로"
         data_form = DataForm()
         template = loader.get_template('writeForm.html')
@@ -125,6 +119,12 @@ def write(request):
             'form': data_form,
         }
         return HttpResponse(template.render(context, request))
+    else:
+        data_form = DataForm(request.POST)
+        if data_form.is_valid():
+            data = data_form.save(commit=False)
+            data.save()
+            return redirect('index')
 ```
 
 #### is_valid()
@@ -171,13 +171,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 
 def update(request, id):
     data = get_object_or_404(DataTbl, id=id)
-    if request.method == 'POST':
-        data_form = DataForm(request.POST, instance=data)
-        if data_form.is_valid():
-            data = data_form.save(commit=False)
-            data.save()
-            return redirect('index')
-    else:
+    if request.method == 'GET':
         title = "처음으로"
         data_form = DataForm(instance=data)
         template = loader.get_template('updateForm.html')
@@ -185,7 +179,13 @@ def update(request, id):
             'title': title,
             'form': data_form,
         }
-    return HttpResponse(template.render(context, request))
+        return HttpResponse(template.render(context, request))        
+    else:
+        data_form = DataForm(request.POST, instance=data)
+        if data_form.is_valid():
+            data = data_form.save(commit=False)
+            data.save()
+            return redirect('index')
 ```
 
 urlpatterns(urls.py)
