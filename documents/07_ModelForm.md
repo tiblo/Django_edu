@@ -159,17 +159,17 @@ urlpatterns = [
 * request.method == 'GET' : 수정 페이지로의 이동
 * request.method == 'POST' : 수정 데이터 DB update
 
-template(index.html)
-```html
-<a href="{% url 'update' id=item.id %}">{{item.str_data}}</a>
-```
-
 urlpatterns(urls.py)
 ```python
 urlpatterns = [
     ...
     path('update/<int:id>', views.update, name='update'),
 ]
+```
+
+template(index.html)
+```html
+<a href="{% url 'update' id=item.id %}">{{item.str_data}}</a>
 ```
 
 > updateForm.html은 writeForm.html과 동일하다.
