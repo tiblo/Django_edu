@@ -159,20 +159,11 @@ urlpatterns = [
 * request.method == 'GET' : 수정 페이지로의 이동
 * request.method == 'POST' : 수정 데이터 DB update
 
-urlpatterns(urls.py)
-```python
-urlpatterns = [
-    ...
-    path('update/<int:id>', views.update, name='update'),
-]
-```
 
 template(index.html)
 ```html
 <a href="{% url 'update' id=item.id %}">{{item.str_data}}</a>
 ```
-
-> updateForm.html은 writeForm.html과 동일하다.
 
 view method(views.py)
 ```python
@@ -196,6 +187,16 @@ def update(request, id):
         }
     return HttpResponse(template.render(context, request))
 ```
+
+urlpatterns(urls.py)
+```python
+urlpatterns = [
+    ...
+    path('update/<int:id>', views.update, name='update'),
+]
+```
+
+> updateForm.html은 writeForm.html과 동일하다.
 
 ### parameter의 처리
 Client에서 Server로 데이터를 전송할 때 사용하는 방식(상세 페이지 이동 등에서 활용)
