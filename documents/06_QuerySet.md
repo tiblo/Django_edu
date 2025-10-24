@@ -53,7 +53,7 @@ WHERE str_data = '문자열' AND id != 2
 
 ### Lookup Filter
 filter(), exclude() 메소드에서 사용할 수 있는, 필드(컬럼)별 구체적인 값에 대한 비교를 가능하게 하는 Django의 내장 모듈.<br>
-연속된 두개의 '_'(underscore)로 시작.
+연속된 두개의 ```_```(underscore)로 시작.
 
 #### __contains, __icontains
 특정 문자가 포함된 데이터를 검색할 때 사용. __contains는 대소문자를 구분하며, __icontains는 대소문자를 구분하지 않는다.
