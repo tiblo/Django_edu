@@ -289,20 +289,20 @@ template(index.html)
 <a href="{% url 'delete' id=item.id %}">[삭제]</a>
 ```
 
-urlpatterns(urls.py)
-```python
-urlpatterns = [
-    ...
-    path('delete/<int:id>', views.delete, name='delete'),
-]
-```
-
 view method(views.py)
 ```python
 def delete(request, id):
     data = get_object_or_404(DataTbl, id=id)
     data.delete()
     return redirect('index')
+```
+
+urlpatterns(urls.py)
+```python
+urlpatterns = [
+    ...
+    path('delete/<int:id>', views.delete, name='delete'),
+]
 ```
 
 ### delete()
