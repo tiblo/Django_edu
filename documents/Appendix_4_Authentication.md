@@ -191,11 +191,13 @@ templates 폴더에 'login.html'을 생성하고 다음과 같이 작성한다.
         <div class="i-form">
             <div>
                 <label for="username">사용자ID</label>
-                <input type="text" name="username" id="username" value="{{ form.username.value|default_if_none:'' }}">
+                <input type="text" name="username" id="username"
+                        value="{{ form.username.value|default_if_none:'' }}">
             </div>
             <div>
                 <label for="password">비밀번호</label>
-                <input type="password" name="password" id="password" value="{{ form.password.value|default_if_none:'' }}">
+                <input type="password" name="password" id="password"
+                        value="{{ form.password.value|default_if_none:'' }}">
             </div>
             <input type="submit" value="login">
         </div>        
